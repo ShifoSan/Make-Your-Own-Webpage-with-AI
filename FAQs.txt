@@ -1,0 +1,47 @@
+## 📋 The Complete FAQ for Your Webpage
+Q: How much does a custom webpage cost?
+A: We have a special Introductory Offer for our first 10 clients!
+ * Level 1 (Static): ₹50
+ * Level 2 (Interactive): ₹70
+ * Level 3 (Immersive): ₹200
+After this introductory offer, our standard, non-negotiable prices will be:
+ * Level 1 (Static): ₹150
+ * Level 2 (Interactive): ₹300
+ * Level 3 (Immersive): ₹600
+Q: What is the difference between Level 1, 2, and 3?
+A:
+ * Level 1: A beautiful, professional, and fast "static" webpage. It's perfect for portfolios or blogs where the main focus is on clean design and readability.
+ * Level 2: A modern, dynamic page. It includes interactive elements and on-scroll animations (like items fading in). This is the standard for most product landing pages.
+ * Level 3: Our premium, "wow-factor" experience. These pages feature cinematic 3D models and "scrollytelling," where the 3D objects animate as you scroll.
+Q: How does the process work?
+A: It's a simple 3-step collaboration:
+ * Vision: You fill out our project form with your idea, goals, and content.
+ * Creation: I (ShifoSan) will personally build your site using my advanced AI tools and send you the first version for review.
+ * Delivery: After our revision rounds, I'll deliver the final, polished code files.
+Q: What do I need to provide to get started?
+A: You just need two things:
+ * Your Vision: Your idea, what the page is for, and any inspiration links you have.
+ * Your Content: All text (like "About Me" or "Services" text) must be provided in a simple document. All images you want to use must be pre-selected. We are not responsible for writing your text or editing your photos.
+Q: How many revisions are included?
+A: We include two full rounds of revisions to make sure you're happy.
+ * Round 1: We deliver the first version. You provide a single, complete list of all your feedback.
+ * Round 2: We deliver the revised version for your final, minor tweaks.
+ * Additional revision rounds after this will be billed at an hourly rate.
+Q: What if I want to add an animation to my Level 1 site?
+A: This is considered a "Scope Upgrade." Our Levels are strict. A request to add a feature from a higher tier (like adding animations to a Level 1 site) will require an upgrade to the Level 2 package. We will always discuss this with you transparently before any extra charges.
+Q: Are there any limits to what you can create?
+A: Yes. We are 100% transparent about this. We specialize in stunning front-end (the visual part of the website). We cannot build complex back-end systems.
+This means we cannot create:
+ * User login systems or member-only areas
+ * E-commerce stores with payment processing
+ * User databases or social media platforms
+ * Any feature that requires a server to store user data
+Q: What happens after you deliver the final code?
+A: Our service is considered complete upon delivery of the final index.html, css, and js files. You own this code. Because we don't manage your site after delivery, we are not responsible for any issues or bugs that are introduced by you or your team while modifying the code. We can be hired at an hourly rate for future updates.
+Q. Do you host the website for me?
+A: We do not offer hosting services. We deliver the code files for you to host wherever you want. We can recommend free and easy-to-use services like GitHub Pages or Netlify.
+Q: How long will it take?
+A: We are very fast. After your project is accepted and you have provided all your content (text and images), you can expect the first version within these maximum timeframes:
+ * Level 1: 2 days (max)
+ * Level 2: 4 days (max)
+ * Level 3: 7 days (max)
