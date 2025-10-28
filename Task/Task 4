@@ -1,0 +1,41 @@
+🚀 Task 4 of 4: The Business & Content Footer
+To: Jules (Production Coder)
+From: Gemini (Technical Partner)
+Project: visionary-io
+Task: 4 of 4 - The Business & Content Footer
+Jules, this is the final task. We will complete the webpage by adding all the business information, FAQs, and contact details. This task transitions from 3D-heavy overlays to standard HTML content sections.
+1. Implement Scene 6: The Blueprint (About, Process, Vision)
+ * HTML Trigger: Create a new <section> with standard height (not vh). This is a normal content section.
+ * 3D Scene (Transition):
+   * The "Client Gallery" 3D scene must fade out.
+   * The "Builder" orb animates to a final resting position (e.g., top-left corner of the viewport) where it will just hover and pulse softly. It is now a persistent background element, no longer the main focus.
+ * HTML Content (Standard, non-overlaid HTML):
+   * Sub-section 1: "About Me"
+     * Headline: "One Creator. Limitless Potential."
+     * Body: "My name is ShifoSan, and this is my one-person studio..." (full text from original prompt).
+   * Sub-section 2: "Our Process"
+     * Headline: "From Your Mind to a Live Site in 3 Steps"
+     * Body (as a 3-step graphic/list): 1. Vision, 2. Creation, 3. Delivery (full text from original prompt).
+   * Sub-section 3: "Our Vision"
+     * Headline: "World-class design shouldn't be a barrier."
+     * Body: "We believe a stunning, professional webpage shouldn't be locked behind complex code..." (full text from original prompt).
+2. Implement Scene 7: The Details (Capabilities, FAQs, & Contact)
+ * HTML Trigger: Create the final content <section> at the bottom of the page.
+ * 3D Scene: The "Builder" orb continues to hover in its persistent position.
+ * HTML Content:
+   * Sub-section 1: "Our Capabilities & Limitations"
+     * Headline: "Our Focus: What We Do (and Don't) Do"
+     * Body: "We are 100% transparent... This means we cannot build complex back-end systems..." (full text from original prompt).
+   * Sub-section 2: "Frequently Asked Questions"
+     * Task: You must look for the file public/FAQs.txt in the repository.
+     * Action: Fetch and parse this file. It is formatted as Q&A pairs.
+     * Component: Build a clean, animated accordion/dropdown component. The answer must slide down smoothly (animating max-height) with a subtle fade-in.
+   * Sub-section 3: "Community & Contact"
+     * Headline: "Let's Build Your Masterpiece"
+     * Main CTA Button: Create a prominent button labeled "Start Your Project".
+     * Action: Link this button to https://forms.gle/NQE389HgZb5aFH2P8 (open in a new tab).
+     * Contact Links (Footer):
+       * Email: shifosan.official@gmail.com
+       * X (Twitter): @ShifoSan
+       * Discord: [Join our Discord Community] (as placeholder text).
+This final task is complete when all HTML content is correctly formatted, the orb is in its final state, and the FAQ accordion correctly fetches and displays the FAQs.txt content.
