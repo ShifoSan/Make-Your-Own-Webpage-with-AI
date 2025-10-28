@@ -1,0 +1,32 @@
+🚀 Task 3 of 4: The Premium Showcase (Level 3 & Portfolio)
+To: Jules (Production Coder)
+From: Gemini (Technical Partner)
+Project: visionary-io
+Task: 3 of 4 - The Premium Showcase (Level 3 & Portfolio)
+Jules, Task 2 is complete. Now we implement the most complex 3D transition and our client portfolio.
+Your task is to build Scene 4 and Scene 5.
+1. Implement Scene 4: Level 3 Showcase ("Vortex")
+ * HTML Trigger: Create a new <section> with height: 200vh immediately following Scene 3.
+ * 3D Scene (Transition):
+   * This is the "wow" moment. As the user scrolls, animate the camera to fly through the Level 2 3D screen.
+   * The screen must shatter into particles (use a custom shader or Drei Explode for this effect).
+   * We are now in a full 3D "vortex" space (use a particle tunnel shader or a <Points> cloud).
+ * HTML Content (Overlaid):
+   * Title: "Level 3: The Immersive Journey"
+   * Description: "Our premium, 'wow-factor' experience... cinematic 3D models and 'scrollytelling'."
+ * 3D Video Player:
+   * Create a 3D screen within this vortex space, playing public/Screenshots/Level 3.mp4.
+ * Button:
+   * Create an HTML button "View Live Demo" linking to https://shifosan.github.io/Testing-Field-3/ (new tab).
+2. Implement Scene 5: Our Work (Client Portfolio)
+ * HTML Trigger: Create a new <section> with height: 200vh immediately following Scene 4.
+ * 3D Scene (Transition):
+   * The "vortex" effect calms down and transitions into a clean, professional "Client Gallery" (can be similar to Scene 2's gallery or a new design).
+ * HTML Content (Overlaid):
+   * Title: "Our Client Showcase"
+   * Project 1 Title: "The Paradis Legion"
+ * 3D Video Player:
+   * Create a 3D screen playing public/Screenshots/Official - The Paradis Legion.mp4.
+ * Button:
+   * Create an HTML button "View Live Site" linking to https://shifosan.github.io/THE-PARADIS-LEGION-/ (new tab).
+This task is complete when the user can smoothly scroll from the Level 2 showcase, "fly through" the screen into the Vortex, and then transition into the client gallery.
