@@ -1,0 +1,60 @@
+* Task 1: The Foundation & Hero Scene
+   * Goal: Set up the entire project architecture and build the complete "above-the-fold" experience.
+   * Actions:
+     * Initialize the Vite + React project.
+     * Install all Core Dependencies (r3f, drei, gsap, etc.).
+     * Establish the "Hybrid Architecture" (Fixed 3D Canvas + Scrollable HTML).
+     * Fully implement Scene 1: The Genesis (Hero Section), including the 3D void, the "Builder" orb particle animation, and the HTML titles [cite: 56-60].
+ * Task 2: The Core Showcase (Levels 1 & 2)
+   * Goal: Build out the first two examples of our work.
+   * Actions:
+     * [cite_start]Implement Scene 2: Level 1 Showcase ("Atelier") [cite: 61-67].
+     * [cite_start]Implement Scene 3: Level 2 Showcase ("Aura") [cite: 68-73].
+     * This includes the 3D scene transitions, the VideoTexture screens, and the HTML content for both.
+ * Task 3: The Premium Showcase (Level 3 & Portfolio)
+   * Goal: Implement the most complex 3D transition and the client portfolio.
+   * Actions:
+     * [cite_start]Implement Scene 4: Level 3 Showcase ("Vortex") (with the "fly-through" screen shatter) [cite: 74-80].
+     * [cite_start]Implement Scene 5: Our Work (Client Portfolio) (with "The Paradis Legion" showcase) [cite: 81-84].
+ * Task 4: The Business & Content Footer
+   * Goal: Complete the webpage with all business information.
+   * Actions:
+     * [cite_start]Implement Scene 6: The Blueprint (About, Process, Vision) [cite: 85-95].
+     * [cite_start]Implement Scene 7: The Details (Capabilities, FAQs, & Contact) [cite: 96-105].
+     * [cite_start]This includes fetching FAQs.txt for the accordion and moving the orb to its final "persistent" state.
+🚀 Task 1 of 4: The Foundation & Hero Scene
+Here is the prompt for Jules to begin Task 1.
+To: Jules (Production Coder)
+From: Gemini (Technical Partner)
+Project: visionary-io
+Task: 1 of 4 - The Foundation & Hero Scene
+Jules, we are building our "Level 3+" official webpage. We will be doing this in 4 sequential tasks to ensure stability.
+This first task is to build the complete foundation and the hero section.
+1. Core Tech Stack (Install All):
+ * Framework: React.js (Use Vite)
+ * 3D: @react-three/fiber, @react-three/drei
+ * Animation: gsap (with ScrollTrigger)
+ * Styling: styled-components or Emotion
+ * State: zustand
+2. Design & Experience Principles (Adhere to these):
+ * The "Builder" Orb: A complex energy effect. A bright white "core" with a swirling, Electric Blue (#007BFF) semi-transparent particle field. It should have a slow, controlled, vortex-like swirl.
+ * Color Palette: Main background is "void" black (#050505). Text is pure white.
+ * Typography: Use Google Fonts. Select a premium, modern font pairing (e.g., Satoshi or Neue Montreal for headings, Inter for body).
+ * Transitions: Must be buttery-smooth with gsap ease-in-out curves.
+ * Mobile: Must be a simplified, but still animated, 3D experience. No static images.
+ * Browsers: Target modern browsers only.
+3. High-Level Architecture (Implement This):
+ * Create the "hybrid" model.
+ * <CanvasComponent />: position: fixed, z-index: -1. This will hold the 3D scene.
+ * <ContentComponent />: The scrollable HTML document with trigger sections.
+ * Use gsap.ScrollTrigger to link the HTML scroll to the 3D camera animations.
+4. Scene 1: The Genesis (Hero Section) (Implement This):
+ * HTML Trigger: Create a <section> with height: 150vh.
+ * 3D Scene: Set the background to the cinematic "void" black (#050505).
+ * Action (On Scroll):
+   * Create a particle cloud using Drei <Points>.
+   * As the user scrolls, use gsap to animate these particles to converge and form the "Builder" orb.
+ * HTML Content (Overlaid):
+   * H1: "Your Vision. Our AI. Your Webpage." (Animate in) .
+   * Sub-title: "A ShifoSan Creation" (Animate in after the H1).
+This task is complete when the project is set up, all dependencies are installed, and the user can scroll down to see the particles form the "Builder" orb as the hero text animates in.
