@@ -39,6 +39,31 @@ faqItems.forEach(item => {
     });
 });
 
+// --- NEW "AMBIENT DRIFT" SETUP ---
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Find all shapes
+    const heroShapes = document.querySelectorAll('.hero-shapes div, .hero-shapes .shape-text');
+
+    // 2. Get viewport dimensions
+    const heroSection = document.getElementById('hero');
+    const vw = heroSection.clientWidth;
+    const vh = heroSection.clientHeight;
+
+    // 3. Loop through each shape and assign a random position
+    heroShapes.forEach(shape => {
+        // Get random % for top and left
+        const randomTop = Math.floor(Math.random() * 80) + 10; // 10% to 90%
+        const randomLeft = Math.floor(Math.random() * 80) + 10; // 10% to 90%
+
+        // Apply the style
+        shape.style.top = `${randomTop}%`;
+        shape.style.left = `${randomLeft}%`;
+
+        // Fade them in
+        shape.style.opacity = '0.5';
+    });
+});
+
 // Draggable Navigation
 const dragNav = document.getElementById('dragNav');
 const toggleBtn = dragNav.querySelector('.toggle-btn');
