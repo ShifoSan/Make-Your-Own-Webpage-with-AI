@@ -9,6 +9,7 @@ body {
     color: #ffffff;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 section {
@@ -55,6 +56,73 @@ section {
     opacity: 0.9;
     position: relative;
     cursor: pointer;
+}
+
+.hero-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-shapes div {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 123, 255, 0.1);
+    animation: float-up 20s infinite linear;
+}
+
+.hero-shapes .shape-1 {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    bottom: -80px;
+    animation-duration: 25s;
+}
+
+.hero-shapes .shape-2 {
+    width: 100px;
+    height: 100px;
+    left: 80%;
+    bottom: -100px;
+    animation-duration: 20s;
+    animation-delay: 5s;
+}
+
+.hero-shapes .shape-3 {
+    width: 50px;
+    height: 50px;
+    left: 45%;
+    bottom: -50px;
+    animation-duration: 30s;
+    animation-delay: 2s;
+}
+
+.hero-shapes .shape-4 {
+    width: 120px;
+    height: 120px;
+    left: 20%;
+    bottom: -120px;
+    animation-duration: 18s;
+    animation-delay: 8s;
+}
+
+.hero-shapes .shape-5 {
+    width: 60px;
+    height: 60px;
+    left: 90%;
+    bottom: -60px;
+    animation-duration: 22s;
+    animation-delay: 12s;
+}
+
+@keyframes float-up {
+    to {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 /* Tooltip from reference */
@@ -357,7 +425,140 @@ section {
 /* Scene 7: The Details */
 #details {
     padding: 4rem 2rem;
-    background-color: #050505; /* void black */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+#stars, #stars2, #stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: 752px 632px #FFF, 170px 334px #FFF, 532px 26px #FFF, 629px 404px #FFF, 595px 407px #FFF, 16px 472px #FFF, 617px 729px #FFF, 835px 98px #FFF, 493px 403px #FFF, 32px 339px #FFF, 808px 254px #FFF, 638px 452px #FFF, 740px 186px #FFF, 290px 486px #FFF, 882px 212px #FFF, 632px 308px #FFF, 486px 610px #FFF, 335px 43px #FFF, 326px 456px #FFF, 843px 25px #FFF, 65px 352px #FFF, 679px 653px #FFF, 158px 379px #FFF, 281px 718px #FFF, 82px 424px #FFF, 679px 197px #FFF, 72px 760px #FFF, 810px 658px #FFF, 169px 12px #FFF, 639px 759px #FFF, 218px 490px #FFF, 646px 639px #FFF, 203px 432px #FFF, 429px 15px #FFF, 545px 399px #FFF, 246px 34px #FFF, 411px 544px #FFF, 762px 283px #FFF, 442px 751px #FFF, 458px 127px #FFF, 731px 538px #FFF, 617px 229px #FFF, 277px 621px #FFF, 859px 37px #FFF, 508px 169px #FFF, 219px 233px #FFF, 221px 40px #FFF, 755px 589px #FFF, 230px 456px #FFF, 71px 558px #FFF, 56px 400px #FFF, 630px 216px #FFF, 431px 26px #FFF, 719px 577px #FFF, 627px 441px #FFF, 353px 412px #FFF, 187px 707px #FFF, 619px 543px #FFF, 129px 388px #FFF, 240px 172px #FFF, 11px 119px #FFF, 27px 113px #FFF, 421px 374px #FFF, 618px 648px #FFF, 584px 331px #FFF, 401px 644px #FFF, 41px 748px #FFF, 829px 522px #FFF, 27px 304px #FFF, 414px 446px #FFF, 439px 120px #FFF, 513px 414px #FFF, 210px 525px #FFF, 553px 567px #FFF, 691px 686px #FFF, 42px 141px #FFF, 399px 742px #FFF, 735px 505px #FFF, 185px 330px #FFF, 20px 480px #FFF, 776px 449px #FFF, 225px 63px #FFF, 497px 235px #FFF, 608px 28px #FFF, 586px 748px #FFF, 532px 225px #FFF, 269px 742px #FFF, 538px 290px #FFF, 192px 601px #FFF, 37px 11px #FFF, 706px 423px #FFF, 33px 404px #FFF, 405px 432px #FFF, 319px 127px #FFF, 48px 536px #FFF;
+    animation: animStar 50s linear infinite;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: 197px 299px #FFF, 437px 274px #FFF, 269px 47px #FFF, 342px 199px #FFF, 529px 236px #FFF, 329px 381px #FFF, 214px 211px #FFF, 30px 118px #FFF, 371px 334px #FFF, 137px 321px #FFF, 477px 219px #FFF, 345px 322px #FFF, 530px 147px #FFF, 161px 370px #FFF, 506px 35px #FFF, 33px 308px #FFF, 182px 55px #FFF, 383px 144px #FFF, 126px 369px #FFF, 193px 25px #FFF, 335px 232px #FFF, 370px 156px #FFF, 429px 376px #FFF, 194px 388px #FFF, 44px 337px #FFF, 350px 248px #FFF, 375px 214px #FFF, 280px 283px #FFF, 203px 197px #FFF;
+    animation: animStar 100s linear infinite;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: 526px 447px #FFF, 544px 193px #FFF, 203px 292px #FFF, 461px 216px #FFF, 242px 421px #FFF, 126px 140px #FFF, 442px 356px #FFF, 335px 283px #FFF, 353px 219px #FFF, 200px 372px #FFF, 510px 343px #FFF, 552px 130px #FFF;
+    animation: animStar 150s linear infinite;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+.shooting-star {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(-45deg, rgba(147, 152, 242, 1), rgba(147, 152, 242, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(147, 152, 242, 1));
+    animation: tail 3s ease-in-out infinite, shooting 3s ease-in-out infinite;
+}
+
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes shooting {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+.shooting-star:nth-child(1) {
+    top: calc(50% - -188px);
+    left: calc(50% - 301px);
+    animation-delay: 4.8s;
+}
+
+.shooting-star:nth-child(2) {
+    top: calc(50% - -10px);
+    left: calc(50% - 224px);
+    animation-delay: 8.7s;
+}
+
+.shooting-star:nth-child(3) {
+    top: calc(50% - -44px);
+    left: calc(50% - 139px);
+    animation-delay: 5.7s;
+}
+
+.shooting-star:nth-child(4) {
+    top: calc(50% - -178px);
+    left: calc(50% - 15px);
+    animation-delay: 4.1s;
+}
+
+.shooting-star:nth-child(5) {
+    top: calc(50% - 188px);
+    left: calc(50% - 180px);
+    animation-delay: 3s;
+}
+
+.shooting-star:nth-child(6) {
+    top: calc(50% - -160px);
+    left: calc(50% - 132px);
+    animation-delay: 9.3s;
+}
+
+.shooting-star:nth-child(7) {
+    top: calc(50% - -179px);
+    left: calc(50% - 219px);
+    animation-delay: 0.8s;
+}
+
+.shooting-star:nth-child(8) {
+    top: calc(50% - -8px);
+    left: calc(50% - 22px);
+    animation-delay: 5.1s;
+}
+
+.shooting-star:nth-child(9) {
+    top: calc(50% - 171px);
+    left: calc(50% - 11px);
+    animation-delay: 2.1s;
+}
+
+.shooting-star:nth-child(10) {
+    top: calc(50% - -49px);
+    left: calc(50% - 176px);
+    animation-delay: 9.8s;
 }
 
 .details-subsection {
@@ -825,4 +1026,10 @@ section {
         width: 100%;
         justify-content: center;
     }
+
+    /* Mobile Nav Fix */
+    #dragNav.open span:nth-child(2) { transform: translate(-50%, -95px); }
+    #dragNav.open span:nth-child(3) { transform: translate(-85px, -60px); }
+    #dragNav.open span:nth-child(4) { transform: translate(-105px, 0px); }
+    #dragNav.open span:nth-child(5) { transform: translate(-85px, 60px); }
 }
