@@ -1,0 +1,62 @@
+Here is the updated prompt for Jules, incorporating all five of your improvement requests.
+🤖 Jules: Project Prompt (Version 3 - Revisions)
+[PROJECT GOAL]
+Perform a series of design and layout revisions on the "V2" build of the "Make your own Webpage with AI" site. The HTML structure is good, but we need to refine the CSS and animations for a more high-end "Level 2.5" feel.
+[PROJECT TIER & STYLE]
+High-End Level 2.5 (Refinement Phase). Continue to use only static HTML, CSS, and vanilla JS. Do not add any new libraries.
+[REVISION INSTRUCTIONS]
+You must implement the following 5 specific changes:
+1. Hero Heading (#hero h1)
+ * Desktop Size: The font-size is perfect on mobile, but too small on desktop. Increase the font-size significantly on desktop views (e.g., @media (min-width: 768px)).
+ * Color-Changing Glow: Add a new @keyframes animation to the h1 to make its glow change colors.
+   * The animation should slowly cycle the text-shadow color.
+   * Example CSS:
+     #hero h1 {
+    /* ... existing styles ... */
+    animation: color-glow 10s linear infinite;
+}
+
+@keyframes color-glow {
+    0%   { text-shadow: 0 0 15px rgba(0, 123, 255, 0.7); } /* Blue */
+    33%  { text-shadow: 0 0 15px rgba(240, 147, 251, 0.7); } /* Pink */
+    66%  { text-shadow: 0 0 15px rgba(0, 255, 150, 0.7); } /* Green */
+    100% { text-shadow: 0 0 15px rgba(0, 123, 255, 0.7); } /* Back to Blue */
+}
+
+2. 3D Builder Orb (.builder-orb-container)
+ * Desktop Size: The orb size is perfect on mobile, but too small on desktop.
+ * Action: In your desktop media query (@media (min-width: 768px)), significantly increase the width and height of the .builder-orb-container (e.g., to 450px or 500px).
+ * You must scale all related child properties proportionally (e.g., the .orb-face dimensions and their translateZ values) to make the orb larger.
+3. Draggable Navigation Menu (#dragNav)
+ * Functionality Fix: The menu options are currently expanding to the right and off-screen.
+ * Action: Modify the CSS for #dragNav.open span:nth-child(...). You must change the transform properties to use negative X-values so the options fly out to the left side of the button.
+   * Example (for span:nth-child(3)): Change transform: translate(50px, -100px); to something like transform: translate(-120px, -70px);.
+   * Example (for span:nth-child(4)): Change transform: translate(80px, -10px); to something like transform: translate(-140px, 0px);.
+   * Adjust all menu items to create a clean fan-out effect to the left.
+4. Showcase & Portfolio Videos (.showcase-player)
+ * Size: The video players are slightly too large.
+   * Action: Modify the #showcase grid. Change grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); to a smaller base size, for example: grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));.
+ * Glow Effect: Add a subtle, constant glow to each video player.
+   * Action: Add a box-shadow to the .showcase-player class.
+   * Example CSS:
+     .showcase-player {
+    /* ... existing styles ... */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+    /* ... existing transition ... */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.showcase-player:hover {
+    /* ... existing transform: translateY(-10px); ... */
+    box-shadow: 0 0 35px rgba(0, 123, 255, 0.5); /* Intensify glow on hover */
+}
+
+5. Blueprint Section (#blueprint)
+ * Problem: This section looks too plain.
+ * Action: Add small, decorative, pure-CSS 3D animated shapes next to each h2 title in this section.
+   * The shapes should be small, roughly the size of the title text (~30px-40px).
+   * They must be pure CSS 3D transforms, not WebGL or canvas.
+   * Give each one a continuous, slow-spinning @keyframes animation.
+ * Implementation:
+   * "One Creator. Limitless Potential.": Add a small CSS 3D spinning cube.
+   * "From Your Mind to a Live Site...": Add a small CSS 3D spinning ring/torus.
+   * "World-class design shouldn't be...": Add a small CSS 3D spinning icosahedron (or a simplified geodesic/crystal shape).
