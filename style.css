@@ -69,54 +69,77 @@ section {
 
 .hero-shapes div {
     position: absolute;
-    border-radius: 50%;
+    bottom: -150px; /* Start off-screen */
     background: rgba(0, 123, 255, 0.1);
+    animation: float-up 20s infinite linear;
+    perspective: 800px;
+}
+
+/* Base shape styles */
+.hero-shapes div[class^="shape-"] {
+    border: 1px solid rgba(0, 123, 255, 0.2);
+}
+
+/* Circles */
+.shape-1, .shape-4, .shape-7, .shape-10, .shape-13 { border-radius: 50%; }
+/* Squares */
+.shape-2, .shape-5, .shape-8, .shape-11, .shape-14 { border-radius: 0; }
+/* 3D Cubes */
+.shape-3, .shape-6, .shape-9, .shape-12, .shape-15 {
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    background: transparent;
+}
+.shape-3::before, .shape-3::after,
+.shape-6::before, .shape-6::after,
+.shape-9::before, .shape-9::after,
+.shape-12::before, .shape-12::after,
+.shape-15::before, .shape-15::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.2);
+}
+.shape-3::before, .shape-6::before, .shape-9::before, .shape-12::before, .shape-15::before { transform: translateZ(-25px); }
+.shape-3::after, .shape-6::after, .shape-9::after, .shape-12::after, .shape-15::after { transform: translateZ(25px); }
+
+
+/* Unique positions, sizes, and animations */
+.shape-1 { width: 80px; height: 80px; left: 5%; animation-duration: 25s; }
+.shape-2 { width: 100px; height: 100px; left: 15%; animation-duration: 20s; animation-delay: 5s; }
+.shape-3 { left: 25%; animation-duration: 30s; animation-delay: 2s; }
+.shape-4 { width: 120px; height: 120px; left: 35%; animation-duration: 18s; animation-delay: 8s; }
+.shape-5 { width: 60px; height: 60px; left: 45%; animation-duration: 22s; animation-delay: 12s; }
+.shape-6 { left: 55%; animation-duration: 28s; animation-delay: 4s; }
+.shape-7 { width: 90px; height: 90px; left: 65%; animation-duration: 19s; animation-delay: 7s; }
+.shape-8 { width: 70px; height: 70px; left: 75%; animation-duration: 24s; animation-delay: 1s; }
+.shape-9 { left: 85%; animation-duration: 26s; animation-delay: 6s; }
+.shape-10 { width: 110px; height: 110px; left: 95%; animation-duration: 21s; animation-delay: 11s; }
+.shape-11 { width: 40px; height: 40px; left: 12%; animation-duration: 32s; animation-delay: 3s; }
+.shape-12 { left: 48%; animation-duration: 23s; animation-delay: 9s; }
+.shape-13 { width: 75px; height: 75px; left: 82%; animation-duration: 27s; animation-delay: 14s; }
+.shape-14 { width: 95px; height: 95px; left: 28%; animation-duration: 20s; animation-delay: 0s; }
+.shape-15 { left: 68%; animation-duration: 29s; animation-delay: 10s; }
+
+/* Floating Text */
+.shape-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    background: transparent;
     animation: float-up 20s infinite linear;
 }
 
-.hero-shapes .shape-1 {
-    width: 80px;
-    height: 80px;
-    left: 10%;
-    bottom: -80px;
-    animation-duration: 25s;
-}
+.shape-text:nth-of-type(1) { left: 10%; animation-duration: 22s; animation-delay: 1s; }
+.shape-text:nth-of-type(2) { left: 30%; animation-duration: 26s; animation-delay: 8s; }
+.shape-text:nth-of-type(3) { left: 50%; animation-duration: 20s; animation-delay: 3s; }
+.shape-text:nth-of-type(4) { left: 70%; animation-duration: 28s; animation-delay: 12s; }
+.shape-text:nth-of-type(5) { left: 90%; animation-duration: 24s; animation-delay: 6s; }
 
-.hero-shapes .shape-2 {
-    width: 100px;
-    height: 100px;
-    left: 80%;
-    bottom: -100px;
-    animation-duration: 20s;
-    animation-delay: 5s;
-}
-
-.hero-shapes .shape-3 {
-    width: 50px;
-    height: 50px;
-    left: 45%;
-    bottom: -50px;
-    animation-duration: 30s;
-    animation-delay: 2s;
-}
-
-.hero-shapes .shape-4 {
-    width: 120px;
-    height: 120px;
-    left: 20%;
-    bottom: -120px;
-    animation-duration: 18s;
-    animation-delay: 8s;
-}
-
-.hero-shapes .shape-5 {
-    width: 60px;
-    height: 60px;
-    left: 90%;
-    bottom: -60px;
-    animation-duration: 22s;
-    animation-delay: 12s;
-}
 
 @keyframes float-up {
     to {
@@ -239,7 +262,7 @@ section {
 /* Scenes 2-5: Showcase Sections */
 #showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
 }
@@ -559,6 +582,66 @@ section {
     top: calc(50% - -49px);
     left: calc(50% - 176px);
     animation-delay: 9.8s;
+}
+
+.shooting-star:nth-child(11) {
+    top: calc(50% - 250px);
+    left: calc(50% - 350px);
+    animation-delay: 1.5s;
+}
+
+.shooting-star:nth-child(12) {
+    top: calc(50% - -50px);
+    left: calc(50% - 400px);
+    animation-delay: 6.2s;
+}
+
+.shooting-star:nth-child(13) {
+    top: calc(50% - 150px);
+    left: calc(50% - 50px);
+    animation-delay: 3.8s;
+}
+
+.shooting-star:nth-child(14) {
+    top: calc(50% - -200px);
+    left: calc(50% - 100px);
+    animation-delay: 7.1s;
+}
+
+.shooting-star:nth-child(15) {
+    top: calc(50% - 50px);
+    left: calc(50% - 300px);
+    animation-delay: 0.5s;
+}
+
+.shooting-star:nth-child(16) {
+    top: calc(50% - -100px);
+    left: calc(50% - 200px);
+    animation-delay: 8.4s;
+}
+
+.shooting-star:nth-child(17) {
+    top: calc(50% - 200px);
+    left: calc(50% - 150px);
+    animation-delay: 2.9s;
+}
+
+.shooting-star:nth-child(18) {
+    top: calc(50% - -150px);
+    left: calc(50% - 350px);
+    animation-delay: 9.9s;
+}
+
+.shooting-star:nth-child(19) {
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    animation-delay: 4.5s;
+}
+
+.shooting-star:nth-child(20) {
+    top: calc(50% - -250px);
+    left: calc(50% - 50px);
+    animation-delay: 1.2s;
 }
 
 .details-subsection {
@@ -1000,10 +1083,6 @@ section {
     }
 
     /* Showcase */
-    #showcase {
-        grid-template-columns: 1fr;
-    }
-
     /* Blueprint & Details */
     .blueprint-subsection h2, .details-subsection h2 {
         font-size: 2rem;
